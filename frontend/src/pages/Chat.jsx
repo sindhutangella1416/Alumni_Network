@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Check, CheckCheck, Image as ImageIcon, Mic, Paperclip, Plus, Send, Smile, Square, X, FileText, MessageCircle } from 'lucide-react';
+import { Check, CheckCheck, Image as ImageIcon, Mic, Plus, Send, Smile, Square, FileText, MessageCircle } from 'lucide-react';
 import EmojiPicker from 'emoji-picker-react';
 
 const API = 'http://127.0.0.1:8000';
@@ -135,7 +135,7 @@ export default function Chat() {
         setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'instant' }), 100);
       }
     }
-  }, [searchParams, connections, session]);
+  }, [searchParams, connections, session, chatWith?.email]);
 
   // Handle media uploading
   const uploadAndSend = async (file) => {
@@ -327,7 +327,7 @@ export default function Chat() {
                     position: 'relative'
                   }}>
                     {m.type === 'image' && (
-                      <img src={m.file_url.startsWith('http') ? m.file_url : `${API}/${m.file_url}`} alt="sent image" style={{ maxWidth: '100%', borderRadius: '4px', marginBottom: '4px', display: 'block' }} />
+                      <img src={m.file_url.startsWith('http') ? m.file_url : `${API}/${m.file_url}`} alt="Shared media" style={{ maxWidth: '100%', borderRadius: '4px', marginBottom: '4px', display: 'block' }} />
                     )}
                     {m.type === 'audio' && (
                       <audio controls src={m.file_url.startsWith('http') ? m.file_url : `${API}/${m.file_url}`} style={{ height: '40px', outline: 'none' }} />
