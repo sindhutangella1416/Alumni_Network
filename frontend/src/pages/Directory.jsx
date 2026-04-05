@@ -14,7 +14,7 @@ const GithubIcon = () => (
   </svg>
 );
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://alumni-network-ev8e.onrender.com';
 
 const fileHref = (path) => {
   if (!path || typeof path !== 'string') return null;
@@ -79,7 +79,7 @@ export default function Directory() {
     async function loadUsers() {
       try {
         setFetchError('');
-        const res = await fetch('http://127.0.0.1:8000/users');
+        const res = await fetch('https://alumni-network-ev8e.onrender.com/users');
         const data = await res.json();
         const list = data.users || [];
         if (!cancelled) {

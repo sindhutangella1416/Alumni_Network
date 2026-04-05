@@ -34,7 +34,7 @@ export default function Dashboard() {
     async function loadUsers() {
       try {
         setFetchError('');
-        const res = await fetch('http://127.0.0.1:8000/users');
+        const res = await fetch('https://alumni-network-ev8e.onrender.com/users');
         const data = await res.json();
         if (!cancelled) {
           setUsers(Array.isArray(data.users) ? data.users : []);

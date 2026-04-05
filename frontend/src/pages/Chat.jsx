@@ -3,8 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Check, CheckCheck, Image as ImageIcon, Mic, Plus, Send, Smile, Square, FileText, MessageCircle } from 'lucide-react';
 import EmojiPicker from 'emoji-picker-react';
 
-const API = 'http://127.0.0.1:8000';
-const WS_URL = 'ws://127.0.0.1:8000';
+const API = 'https://alumni-network-ev8e.onrender.com';
+const WS_URL = 'wss://alumni-network-ev8e.onrender.com';
 
 const formatTime = (isoString) => {
   if (!isoString) return '';

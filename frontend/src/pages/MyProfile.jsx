@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Save, User as UserIcon } from 'lucide-react';
 
-const API = 'http://127.0.0.1:8000';
+const API = 'https://alumni-network-ev8e.onrender.com';
 
 const ROLE_OPTIONS = [
   { value: 'Student', label: 'Student' },

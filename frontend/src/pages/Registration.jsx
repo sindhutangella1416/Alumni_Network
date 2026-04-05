@@ -59,7 +59,7 @@ export default function Registration() {
     setLoading(true);
     
     try {
-      const res = await fetch(`http://127.0.0.1:8000/oauth-login`, {
+      const res = await fetch(`https://alumni-network-ev8e.onrender.com/oauth-login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
