@@ -337,7 +337,7 @@ export default function Directory() {
                   }
                   const me = JSON.parse(raw);
                   try {
-                    await fetch('http://127.0.0.1:8000/connect', {
+                    await fetch('https://alumni-network-ev8e.onrender.com/connect', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({
