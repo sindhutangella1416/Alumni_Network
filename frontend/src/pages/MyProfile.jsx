@@ -91,7 +91,7 @@ export default function MyProfile() {
         profilePhoto: u.profilePhoto || '',
       });
     } catch {
-      setProfileErr('Could not load profile. Is backend running?');
+      setProfileErr('Failed to connect to server. Please try again.');
     }
   }, []);
 

@@ -87,7 +87,7 @@ export default function Directory() {
         }
       } catch (e) {
         if (!cancelled) {
-          setFetchError('Could not load directory from backend. Please start backend server.');
+          setFetchError('Failed to connect to server. Please try again.');
         }
       }
     }

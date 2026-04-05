@@ -181,7 +181,7 @@ export default function Registration() {
     }
 
     try {
-      const res = await fetch('http://127.0.0.1:8000/register', {
+      const res = await fetch('https://alumni-network-ev8e.onrender.com/register', {
         method: 'POST',
         body: fd,
       });
@@ -206,7 +206,7 @@ export default function Registration() {
 
       navigate('/login');
     } catch (err) {
-      setError('Unable to connect to backend. Is FastAPI running on port 8000?');
+      setError('Failed to connect to server. Please try again.');
       setLoading(false);
     }
   };

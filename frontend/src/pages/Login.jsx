@@ -59,7 +59,7 @@ export default function Login() {
       setIsSubmitted(false);
       navigate('/my-profile');
     } catch (err) {
-      setError('Unable to connect to backend. Is FastAPI running on port 8000?');
+      setError('Failed to connect to server. Please try again.');
       setIsSubmitted(false);
     }
   };
@@ -99,7 +99,7 @@ export default function Login() {
       setIsSubmitted(false);
       navigate('/my-profile');
     } catch (err) {
-      setError('Unable to connect to backend. Is FastAPI running on port 8000?');
+      setError('Failed to connect to server. Please try again.');
       setIsSubmitted(false);
     }
   };
